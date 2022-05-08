@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skimmy</title>
+    <link rel="stylesheet" href="static/style/style_result.css">
+    <script src="https://kit.fontawesome.com/996f78b0c3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mainContainer">
+<!-- NavBar -->
+<div class="navBar">
+    <div class="navLogo">
+        <form method="get" action="/">
+        <button type="submit" class="topButton" id="Skimmy" >&lt;/Skimmy&gt;</button>
+        </form>
+        <!-- <text id="_Skimmy_" data-name="&lt;/Skimmy&gt;" class="cls-1" transform="translate(0 41)"><tspan x="0" y="0">&lt;/Skimmy&gt;</tspan></text> -->
+    </div>
+    <div class="navButtons">
+        <a class="topButton" id="PDF" href="/submit/get_pdf" style="color: #53FDAE;">Get PDF</a>
+        <a class="topButton" id="Home" href="/">Home</a>
+        <a class="topButton" id="About" href="/aboutus">About Us</a>
+        
+    </div>            
+        <button class="Options"> sidebar</button>
+    </div>
+<!-- Actual Body of the Page -->
+        <div class="container">
+                                <!-- Page Two-->
+
+            <div class="sucess" id="pageTwo">
+                <h1>Skimmy is done!</h1>
+                <hr>
+            </div>
+            <div class="content" id="pageTwo">
+                {% if objective %}
+                <h1 class="OutputHeader">Objective - </h1>
+                    <div class="Output" id="output">{{ objective }}</div>
+                {% endif %}
+                {% if methods %}
+                <h1 class="OutputHeader">Methods - </h1>
+                    <div class="Output" id="Methods">{{ methods}}</div>
+                {% endif %}
+                {% if results %}
+                <h1 class="OutputHeader">Results - </h1>
+                    <div class="Output" id="Results" >{{ results }}</div>
+                {% endif %}
+                {% if background %}
+                <h1 class="OutputHeader">Background - </h1>
+                    <div class="Output" id="Background">{{ background }}</div>
+                {% endif %}
+                {% if conclusions %}
+                <h1 class="OutputHeader">Conclusion - </h1>
+                    <div class="Output" id="Conclusion">{{ conclusions }}</div>
+                {% endif %}    
+            </div>
+        </div>
+<!-- Bottom Text of Page -->
+        <footer class="bottomText">
+            <div class="copyright">
+                @2022 Team Skimmy
+            </div>
+            <div class="links">
+                    <a href="">Privacy Note</a>
+                    <a href="">Become Our Patreon</a>
+                    <a href="">Contact Us</a>
+            </div>
+        </footer>
+        <script>
+            var preloader=document.getElementById('loading');
+
+            function myFunction(){
+                preloader.style.display='none';
+            }
+        </script>
+    </div>   
+</body>
+</html>
